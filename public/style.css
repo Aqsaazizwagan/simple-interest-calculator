@@ -1,0 +1,120 @@
+/* Cyberpunk / Matrix Glassmorphism Custom Styling */
+
+:root {
+  --matrix-green: #00ff66;
+  --matrix-glow: #00ff88;
+  --cyber-cyan: #00f0ff;
+  --cyber-magenta: #ff007f;
+  --cyber-bg: #06090e;
+}
+
+/* Background Cyber Grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 136, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10, 16, 24, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-pill {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom Cyber Range Sliders */
+.cyber-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #151f2e;
+  border-radius: 9999px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cyber-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--matrix-glow);
+  box-shadow: 0 0 10px var(--matrix-glow);
+  cursor: pointer;
+  border: 2px solid #000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cyber-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 16px var(--matrix-glow);
+}
+
+.cyber-slider.accent-cyber-cyan::-webkit-slider-thumb {
+  background: var(--cyber-cyan);
+  box-shadow: 0 0 10px var(--cyber-cyan);
+}
+.cyber-slider.accent-cyber-cyan::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 16px var(--cyber-cyan);
+}
+
+.cyber-slider.accent-cyber-magenta::-webkit-slider-thumb {
+  background: var(--cyber-magenta);
+  box-shadow: 0 0 10px var(--cyber-magenta);
+}
+.cyber-slider.accent-cyber-magenta::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 16px var(--cyber-magenta);
+}
+
+/* Cyber Custom Scrollbar */
+.cyber-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.cyber-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cyber-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 3px;
+}
+
+.cyber-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--matrix-glow);
+}
+
+/* Remove default arrows on number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Pulsing neon effect */
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.8));
+  }
+  50% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 3px rgba(0, 255, 136, 0.4));
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s infinite ease-in-out;
+}

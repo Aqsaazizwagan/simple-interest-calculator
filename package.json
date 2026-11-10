@@ -1,0 +1,25 @@
+{
+  "name": "cyber-simple-interest-calculator",
+  "version": "1.0.0",
+  "description": "A modern, full-stack Simple Interest Calculator with a cyberpunk/matrix glassmorphism UI and Express.js REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "simple-interest",
+    "financial-calculator",
+    "cyberpunk",
+    "matrix",
+    "express",
+    "chartjs",
+    "glassmorphism"
+  ],
+  "author": "Aqsa Aziz Wagan (2K23/CSM/21) - IMCS, University of Sindh",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
